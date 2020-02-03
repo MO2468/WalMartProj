@@ -11,6 +11,13 @@ public class HomePage extends TestBase{
 	WebElement accountButton;
 	@FindBy(css="a[data-module-id='373118c9-6626-48b9-8b4d-fdb1656b1480']" )
 	WebElement signinButton;
+	@FindBy(css="[class='h_a a5_b header-GlobalSearch-input mweb-Typeahead-input h_b']")
+	WebElement searchField;
+	@FindBy(css="button[class='f_a a5_e GlobalHeaderSearchbar-submit f_c']")
+	WebElement clickSearch;
+	
+	
+	
 	
 	public HomePage(){
 		PageFactory.initElements(driver, this);
@@ -23,5 +30,9 @@ public class HomePage extends TestBase{
 		signinButton.click();
 	}
 	
+	public void searchProduct(String product){
+		searchField.sendKeys(product);
+		clickSearch.click();
+	}
 	
 }
