@@ -38,7 +38,7 @@ public class LoginTest extends TestBase {
 	hp.clickonSignIn();
 	sip.login(propt.getProperty("user"), propt.getProperty("pass"));
 	String msg = sip.getError();
-	Assert.assertEquals(msg, "Please enter a valid email address.");
+	Assert.assertEquals(msg, "Please enter a valid email address.", "wrong message-email");
 	
 	}
 	

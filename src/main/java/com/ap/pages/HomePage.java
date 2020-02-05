@@ -30,9 +30,10 @@ public class HomePage extends TestBase{
 		signinButton.click();
 	}
 	
-	public void searchProduct(String product){
+	public SearchPage searchProduct(String product){
 		searchField.sendKeys(product);
 		clickSearch.click();
+		return new SearchPage();//Have to add this line!!to create instance after searching, otherwise null pointer
 	}
 	
 }
