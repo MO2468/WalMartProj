@@ -1,5 +1,10 @@
 package com.ap.pages;
 
+
+
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,13 +21,22 @@ public class HomePage extends TestBase{
 	@FindBy(css="button[class='f_a a5_e GlobalHeaderSearchbar-submit f_c']")
 	WebElement clickSearch;
 	
+	@FindBy(tagName="a")
+	List<WebElement> links;
+	
+	
+	
 	
 	
 	
 	public HomePage(){
 		PageFactory.initElements(driver, this);
 	}
-	
+	public int HomePagelinks(){
+		return links.size();
+		
+	}
+
 	public void clickonAcctButton(){
 		accountButton.click();
 }
