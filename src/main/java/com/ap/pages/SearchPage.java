@@ -19,5 +19,7 @@ public class SearchPage extends TestBase {
 		product1.click();
 		return new ProductDetailsPage();
 	}
+
+
 	
 }
